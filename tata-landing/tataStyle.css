@@ -1,0 +1,1118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+}
+.indicators{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 280px;
+    right: 10px;
+    gap: 15px;
+    a{
+        height: 10px;
+        width: 10px;
+        background-color: gray;
+        border-radius: 50%;
+    }
+}
+nav{
+    height: 80px;
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.468);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+nav .nav-items{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .nav-items a{
+    text-decoration: none;
+    font-family: "Edu VIC WA NT Beginner";
+    font-weight: 800;
+}
+nav a::before{
+    content: "";
+    height: 3px;
+    width: 0px;
+    display: inline-block;
+    background-color: black;
+    position: relative;
+    top: 30px;
+    border-radius: 50px;
+}
+a:hover::before{
+    width: 100%;
+    transition: all .2s linear;
+}
+nav .nav-icon{
+    display: flex;
+    gap: 30px;
+}
+/* contact-section starts */
+.contact{
+    height: 65px;
+    width: 100%;
+    background-color: rgb(2, 16, 16);
+    box-shadow: -1px -1px 5px black;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+    .call,.test-drive{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    svg{
+        animation: zoom-up 0.5s linear infinite alternate ;
+    }
+}
+@keyframes zoom-up {
+    to{
+        transform: scale(1.2);
+    }
+}
+.primary-link{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+/* home stars */
+.home{
+    height: 90vh;
+    width:100%;
+    /* .right-side{
+        height: 100%;
+        width: 40%;
+        background-color: goldenrod;
+        position: absolute;
+        right: 0;
+    } */
+     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 600px, goldenrod);
+     display: flex;
+     justify-content: center;
+     p{
+        width: 100%;
+        /* text-align: center; */
+     }
+     .hometext{
+        margin-left: 60px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bookbut{
+        position: absolute;
+        top: 660px;
+        left: 60px;
+        gap: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        .bookbutton .a1{
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+            border: 2px blue solid;
+        padding: 6px;
+        }
+        
+        .bookbutton2 a{
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+        }
+    }
+}
+.primary-head{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 4rem;
+}
+.primary-para{
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: 600; */
+    text-align: left;
+}
+/* ----- car animation ----- */
+/* .home img{
+    animation: scroll 15s linear;
+    animation-timeline: scroll();
+    opacity: 0;
+}
+@keyframes scroll {
+    from{
+        transform: translate(500px);
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+} */
+/* price section stars */
+.section-price{
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    .price-right{
+        height: 100%;
+        width:50%;
+        /* background-color: rgb(41, 41, 41); */
+        margin-left: 150px;
+        margin-bottom: 100px;
+        /* margin-top: 30px; */
+    }
+    .price-left{
+        height: 100%;
+        width:50%;
+        /* background-color: rgb(41, 41, 41); */
+    }
+    .loc{
+        height: 30px;
+        width: 50%;
+        border-bottom: 2px solid white;
+        /* background-color: yellow; */
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        gap: 30px;
+    }
+    .loc:hover{
+        cursor: pointer;
+    }
+    p{
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .price-left .primary-para{
+        color: white;
+        font-size: 15px;
+        text-align: justify;
+    }
+    button{
+        background-color: transparent;
+        border: 0;
+    }
+    /* price right */
+    .price-right .pright,.pright2{
+        text-transform: capitalize;
+        font-size: 1.5rem;
+    }
+    .price-right h1{
+        font-size: 3rem;
+        color: white;
+    }
+    .price-right a{
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none; 
+    }
+    .price-right .pricetag{
+        border: 2px white solid;
+        position: absolute;
+        margin-bottom: 300px;
+        /* margin-bottom: 50px; */
+        margin-left: 500px;
+        padding: 7px;
+        width: 130px;
+    }
+}
+.cities{
+    height: 200px;
+    width: 360px;
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+    position: absolute;
+    top: 880px;
+    border: none;
+    p{
+        line-height: 30px;
+    }
+}
+.cities::-webkit-scrollbar{
+    width: 10px;
+}
+.cities::-webkit-scrollbar-track{
+    width: 10px;
+    background-color: yellow;
+}
+.cities::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, 0.022) inset;
+}
+/* price section ends */
+/* Design section starts */
+/* desi text */
+.design-text h1{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 3rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.design-text p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: gray;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.design-video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ivideo{
+        margin-top: 30px;
+    }
+}
+.design-section{
+    .parametric-grille{
+        margin-left: 135px;
+        width: 82%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    .grilletext h1{
+        margin-top: 50px;
+        font-size: 3rem;
+        font-family: "Playfair Display", serif
+    }
+    .grilletext p{
+        margin-top: 10px;
+        margin-right: 100px;
+        color: gray;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+    }
+    .oyster-white{
+        display: flex;
+        flex-direction: row;
+        margin-left: 135px;
+        width: 82%;
+        gap: 50px;
+    }
+    .oyster-white h1{
+        margin-top: 50px;
+        font-size: 3rem;
+        font-family: "Playfair Display", serif
+    }
+    .oyster-white p{
+        margin-top: 10px;
+        margin-right: 100px;
+        color: gray;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+    .multicolor{
+        display: flex;
+        flex-direction: row;
+        margin-left: 135px;
+        width: 82%;
+        gap: 50px;
+    }
+    .multicolor h1{
+        margin-top: 50px;
+        font-size: 3rem;
+        font-family: "Playfair Display", serif
+    }
+    .multicolor p{
+        margin-top: 10px;
+        margin-right: 100px;
+        color: gray;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+    .digitalshowroom{
+        display: flex;
+        flex-direction: row;
+        margin-left: 135px;
+        width: 82%;
+        gap: 50px;
+        margin-top: 70px;
+        background-color: rgb(245, 245, 245);
+    }
+    .digitalshowroom h1{
+        margin-top: 50px;
+        font-size: 3rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .digitalshowroom p{
+        margin-top: 20px;
+        color: gray;
+        text-align: justify;
+        font-size: 1.2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .digitalshowroom a{
+        text-decoration: none;
+        color: blue;
+        font-size: 1.2rem;
+    }
+    .citydesign{
+        margin-top: 50px;
+        margin-left: 137px;
+    }
+}
+/* Design section ends */
+/* Safety section starts */
+.safety-section{
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    background-color: rgb(45, 44, 44);
+    .safety-heading{
+        text-align: center;
+        .heading1{
+            padding-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 200;
+            color: rgb(177, 177, 177);
+        }
+        .heading2{
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            color: white;
+            font-weight: 400;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 200;
+            color: rgb(177, 177, 177);
+            margin-top: 20px;
+        }
+    }
+    .safety-div1{
+        width: 80%;
+        margin-left: 155px;
+        margin-top: 100px;
+        display: flex;
+        gap: 50px;
+        .text{
+            h1{
+                color: white;
+                font-family: "Noto Sans", sans-serif;
+                font-weight: 800;
+                font-size: 3rem;
+            }
+            p{
+                color: white;
+                font-family: "Noto Sans", sans-serif;
+            }
+            a{
+                color: rgb(149, 149, 149);
+                font-family: "Noto Sans", sans-serif;
+                text-decoration: none;
+            }
+            a:hover{
+                color: white;
+            }
+        }
+    }
+    .safety-div2{
+        width: 80%;
+        margin-left: 155px;
+        margin-top: 20px;
+        p{
+            color: white;
+            font-size: 1.3rem;
+            margin-left: 500px;
+            text-align: justify;
+        }
+    }
+    .safety-div3{
+        margin-top: 20px;
+        display: flex;
+        width: 82%;
+        margin-left: 135px;
+        gap: 50px;
+        h1{
+            color: white;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 700;
+            font-size: 2.9rem;
+            margin-top: 50px;
+        }
+        p{
+            color: rgb(188, 188, 188);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-align: left;
+        }
+    }
+}
+/* Safety section ends */
+/* ADAS sectio starts */
+.ADAS-section{
+    .adas-div1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 350px;
+        h1{
+            margin-top: 20px;
+            text-align: center;
+            color: black;
+            font-size: 2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p{
+            margin-top: 10px;
+            text-align: center;
+            color: gray;
+            font-size: 1.2rem;
+        }
+    }
+    .adas-div2{
+        margin-top: 50px;
+        display: flex;
+        width: 100%;
+        gap: 60px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        .text{
+            /* margin-top: 100px; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                margin-top: 80px;
+                font-size: 3rem;
+                color: black;
+            }
+            p{
+                color: gray;
+                font-size: 1.2rem;
+                text-align: justify;
+                margin-left: 110px;
+            }
+        }
+        .image{
+            img{             
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .adas-div3{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 20px;
+        .image{
+            img{
+                width: 128%;
+            }
+        }
+        .text{
+            width: 50%;
+            margin-left: 200px;
+            h1{
+                margin-top: 80px;
+                font-size: 3rem;
+                color: black;
+                margin-right: 100px;
+            }
+            p{
+                color: gray;
+                font-size: 1.2rem;
+                text-align: justify;
+                margin-right: 100px;
+            }
+        }
+    }
+    .adas-div4{
+        display: flex;
+        width: 100%;
+        gap: 60px;
+        .text{
+            width: 46%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                margin-top: 100px;
+                font-size: 3rem;
+                color: black;
+            }
+            p{
+                margin-top: 20px;
+                color: gray;
+                font-size: 1.2rem;
+                text-align: justify;
+                margin-left: 90px;
+            }
+            /* animation: text 2s linear 1 forwards;
+            animation-timeline: scroll(y); */
+        }
+        .image{
+            width: 50%;
+            img{             
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+/* @keyframes text {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+} */
+/* ADAS section ends */
+/* Performance section starts */
+.Performance-section{
+    margin-top: 30px;
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(45, 44, 44);
+    .performance-div1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            margin-top: 20px;
+            color: rgb(177, 177, 177);
+            font-family: "Playfair Display", serif;
+            font-weight: 300;
+        }
+        h1{
+            color: white;
+            font-size: 3rem;
+            font-family: "Noto Sans", sans-serif;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: rgb(177, 177, 177);
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+        }
+    }
+    .performance-div2{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        .image{
+            img{
+                width: 120%;
+                height: 100%;
+            }
+        }
+        .text{
+            width: 50%;
+            margin-left: 100px;
+            h1{
+                margin-top: 150px;
+                font-family: "Noto Sans", sans-serif;
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 600;
+                margin-right: 100px;
+            }
+            p{
+                font-family: "Noto Sans", sans-serif;
+                color: white;
+                font-size: 1.2rem;
+                margin-right: 100px;
+                font-weight: 200;
+            }
+        }
+    }
+}
+/* Performance section ends */
+/* Techno section starts */
+.Technology-section{
+    width: 100%;
+    height: 150vh;
+    font-family: "Noto Sans", sans-serif;
+    
+    .techno-div1{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            color: rgb(177, 177, 177);
+            font-weight: 400;
+        }
+        p{
+            margin-top: 15px;
+            color: rgb(177, 177, 177);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        h1{
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    }
+    .techno-div2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 50px;
+        margin-top: 50px;
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 40%;
+            margin-left: 50px;
+            h1{
+                font-family: "Noto Sans", sans-serif;
+                font-weight: 600;
+                font-size: 3rem;
+            }
+            p{
+                color: rgb(124, 124, 124);
+            }
+        }
+        .image{
+            margin-left: 10px;
+            img{
+                width: 130%;
+
+            }
+        }
+    }
+    .techno-div3{
+        display: flex;
+        gap: 80px;
+        .image{
+            img{
+                width: 117%;
+            }
+        }
+        .text{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1,p{
+                margin-left: 100px;
+            }
+            p{
+                color: rgb(124, 124, 124);
+            }
+            h1{
+                font-family: "Noto Sans", sans-serif;
+                font-weight: 600;
+                font-size: 3rem;
+                text-align: left;
+            }
+        }
+    }
+}
+/* Techno section ends */
+/* comfort sec starts */
+.Comfort-section{
+    background-color: rgb(45, 44, 44);
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Sans", sans-serif;
+    .comfort-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size: 3rem;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 600;
+            color: white;
+        }
+        h3{
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-family: "Noto Sans", sans-serif;
+            color: rgb(177, 177, 177);
+            font-weight: 400;
+        }
+        p{
+            margin-top: 10px;
+            font-family: "Noto Sans", sans-serif;
+            color: rgb(177, 177, 177);
+            font-size: 1rem;
+        }
+    }
+    .comfort-div1{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 40px;
+        .image{
+            width: 120%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 2.5rem;
+                font-family: "Noto Sans", sans-serif;
+                color: white;
+                margin-right: 80px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                font-family: "Noto Sans", sans-serif;
+                color: white;
+                margin-right: 100px;
+            }
+        }
+    }
+    .comfort-div2,.comfort-div4,.comfort-div6, .comfort-div8{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        .text{
+            margin-left: 100px;
+            width: 120%;
+            h1{
+                font-size: 2.5rem;
+                color: white;
+            }
+            p{
+                color: white;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+        .image{
+            width: 135%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .comfort-div3{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        .image{
+            width: 107%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 2.5rem;
+                color: white;
+                margin-right: 80px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                color: white;
+                margin-right: 100px;
+            }
+        }
+    }
+    .comfort-div5{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        .image{
+            width: 102%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 2.5rem;
+                color: white;
+                margin-right: 80px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                color: white;
+                margin-right: 100px;
+            }
+        }
+    }
+    .comfort-div7{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        .image{
+            width: 88%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 2.5rem;
+                color: white;
+                margin-right: 80px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                color: white;
+                margin-right: 100px;
+            }
+        }
+    }
+    .comfort-div9{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        .image{
+            width: 60%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 2.5rem;
+                color: white;
+                margin-right: 80px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                color: white;
+                margin-right: 100px;
+            }
+        }
+    }
+    .comfort-div10{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        .text{
+            margin-left: 100px;
+            width: 120%;
+            h1{
+                font-size: 2.5rem;
+                color: white;
+            }
+            p{
+                color: white;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            
+        }
+        
+        .image{
+            margin-bottom: 30px;
+            width: 135%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+/* Comfort sec ends */
+/* Dealership starts */
+.Dealership-section{
+    font-family: "Noto Sans", sans-serif;
+    width: 100%;
+    .dealer{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+    .find-dealer{
+        height: 400px;
+        width: 400px;
+        background-color: white;
+        position: absolute;
+        left: 250px;
+        h1{
+            color: rgb(74, 74, 74);
+            margin: 50px 0 0 60px;
+        }
+        p{
+            color: rgb(80, 80, 80);
+            justify-content: center;
+            margin: 10px 50px 0 60px;
+            font-size: 1.2rem;
+        }
+        a{
+            margin-left: 50px;
+            font-size: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+    }
+    .test-drive{
+        display: flex;
+        margin-top: 30px;
+        margin-left: 150px;
+        margin-right: 130px;
+        gap: 50px;
+        background-color: rgba(128, 128, 128, 0.073);
+        .text{
+            h1{
+                margin-top: 40px;
+                color: rgb(51, 51, 51);
+            }
+            p{
+                margin-top: 20px;
+                color: rgb(105, 105, 105);
+            }
+            a{
+                font-size: 15px;
+                text-decoration: none;
+                color: blue;
+            }
+        }
+    }
+    .dealership-div3{
+        margin-top: 30px;
+        margin-left: 150px;
+        display: flex;
+        .compare{
+            margin-top: 20px;
+            background-color: rgba(128, 128, 128, 0.073);
+            width: 45%;
+            height: 450px;
+            /* height: 100%; */
+            h1,p{
+                margin-left: 30px;
+                font-weight: 400;
+            }
+            a{
+                margin-left: 30px;
+                color: blue;
+                text-decoration: none;
+            }
+        }
+        .compare2{
+            margin-top: 26px;
+            margin-left: 30px;
+            margin-right: 120px;
+            width: 50%;
+            height: 350px;
+            .image{
+                img{
+                    width: 100%;
+                    height: 450px;
+                }
+            }
+        }
+    }
+}
+/* Dealership ends */
+/* Footer starts */
+.Footer-section{
+    font-family: "Noto Sans", sans-serif;
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgb(45, 44, 44);
+    display: flex;
+    flex-direction: row;
+    .social{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        /* margin-left: 800px; */
+        position: relative;
+        left: 600px;
+        a,h1{
+            color: white;
+            text-decoration: none;
+        }
+    }
+    .Quick-links{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: relative;
+        left: 400px;
+        /* margin-left: 500px; */
+        a,h1{
+            color: white;
+            text-decoration: none;
+        }
+    }
+    .copyrights{
+        p{
+            position: relative;
+            top: 280px;
+            left: 50px;
+            color: white;
+            font-weight: 400;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            position: relative;
+            top: 150px;
+            left: 50px;
+        }
+        .a1{
+            position: relative;
+            background-color: white;
+        }
+    }
+}
+/* Footer ends */
